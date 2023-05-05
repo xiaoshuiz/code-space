@@ -5,3 +5,6 @@
 
 ## selection
     获取网页光标选中的内容
+
+## comment-view
+    对话气泡

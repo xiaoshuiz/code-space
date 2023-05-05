@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,height=device-height" />
+    <title>对话气泡</title>
+    <style>
+        .comment,
+        .comment-with-border {
+            position: relative;
+            width: 300px;
+            margin: 30px;
+            background-color: #eee;
+            padding: 5px;
+            border-radius: 6px;
+            overflow: visible;
+            line-height: 30px;
+            font-size: 16px;
+        }
+
+        .comment:before {
+            position: absolute;
+            top: 11px;
+            left: -8px;
+            width: 8px;
+            background-color: #eee;
+            pointer-events: none;
+            height: 16px;
+            content: ' ';
+            display: block;
+            -webkit-clip-path: polygon(0 50%, 100% 0, 100% 100%);
+            clip-path: polygon(0 50%, 100% 0, 100% 100%);
+            box-shadow: -1px -1px 2px 0px #999;
+
+        }
+
+        .comment-with-border {
+            border: 1px #999 solid;
+        }
+
+
+        .comment-with-border:before,
+        .comment-with-border:after {
+            position: absolute;
+            top: 11px;
+            left: -8px;
+            width: 8px;
+            background-color: #999;
+            pointer-events: none;
+            height: 16px;
+            content: ' ';
+            display: block;
+            -webkit-clip-path: polygon(0 50%, 100% 0, 100% 100%);
+            clip-path: polygon(0 50%, 100% 0, 100% 100%);
+
+        }
+
+        .comment-with-border:after {
+            left: -6.5px;
+            background-color: #eee;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class='comment'>
+        阿哈哈哈哈哈
+    </div>
+    <div class='comment-with-border'>
+        有边界的哈哈哈哈哈
+    </div>
+</body>
+
+</html>
